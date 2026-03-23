@@ -1,5 +1,17 @@
 # Exercise 01 — File System & JSON
 
+```
+Semester: S4
+Course: Server Side JavaScript
+Course Code: PROG_JSS1
+```
+
+## Exercise Branches for Assignment
+```
+Exercise 01: exercise-001
+Exercise 02: exercise-002
+```
+
 ## Goal
 
 Read a JSON file, transform its data, and write the result to a Markdown file — all using Node.js built-in modules, no `npm install` needed.
