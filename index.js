@@ -1,4 +1,8 @@
-const express = require("express")
+import express from "express" // new js
+
+const express = require("express") // old js
+
+
 const app = express()
 const port = 3000
 
