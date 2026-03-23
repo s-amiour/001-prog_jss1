@@ -1,71 +1,53 @@
-# Exercise 01 — File System & JSON
+# Exercise 02 — API with JSON Model
+
+```
+Semester: S4
+Course: Server Side JavaScript
+Course Code: PROG_JSS1
+```
+
+## Exercise Branches
+```
+Exercise 01: exercise-001
+Exercise 02: exercise-002
+```
 
 ## Goal
 
-Read a JSON file, transform its data, and write the result to a Markdown file — all using Node.js built-in modules, no `npm install` needed.
+Construct an API (almost MVC but with .json as model) that the FONT/ client can fetch and display. CRUD operations must also be present.
 
-## What you will build
 
-A script that reads `students.json` and generates a `student_report.md` file.
-
-## Run it
-
-```bash
-node index.js
 ```
+// NODEMON ✅
 
-If it works, you should see a success message in the terminal and a new `student_report.md` file appear next to `index.js`.
+// send data to the exposed endpoints ✅
+// import data from students.json and send it to the client when they hit the endpoint ✅
+// use postman to send data to endpoints ✅
 
-## Modules you will need
+// GET - retrieve data 
+// POST - create new data 
+// PUT - update existing data
+// DELETE - remove data
+// CRUD - create, read, update, delete ✅
 
-| Module | What it does                            |
-| ------ | --------------------------------------- |
-| `fs`   | Read and write files on your filesystem |
-| `path` | Build file paths that work on any OS    |
+// SEND DATA vs SEND ERROR ✅
+// STATUS CODES - 200, 201, 400,  ✅
+// JSON - JavaScript Object Notation ✅
+// res.json() - send JSON response ✅
+// res.status() - set status code ✅
+// res.send() - send response ✅
 
-Both are built into Node.js — just `require` them, no install needed.
+// TRY FRONTEND NOW before moving on
+// go to FONT folder and open index.html in the browser, check console for errors, fix them, and see the data being displayed
 
-## Key functions
+// CORS - Cross-Origin Resource Sharing ✅
+// npm i cors
+// app.use(cors())
 
-- `fs.readFileSync(filePath, 'utf-8')` — reads a file and returns its contents as a string
-- `fs.writeFileSync(filePath, content, 'utf-8')` — writes a string to a file (creates it if it doesn't exist)
-- `JSON.parse(string)` — converts a JSON string into a JavaScript object
-- `path.join(__dirname, 'filename')` — builds a safe absolute path relative to the current script
+// REFACTORING
+// 1. Create a separate file for routes (e.g., routes.js) ✅
+// 2. Create a separate file for controllers (e.g., controllers.js) ✅
+// 3. Change commonJs to ES6 modules (e.g., import/export) - this will require adding "type": "module" in package.json ✅
 
-## Steps
-
-1. Require the `fs` and `path` modules
-2. Read `students.json` using `fs.readFileSync`
-3. Parse the JSON string into a JavaScript array using `JSON.parse`
-4. Build a Markdown string by looping over the students array
-5. Write the result to `student_report.md` using `fs.writeFileSync`
-
-## Expected output
-
-The generated `student_report.md` should look like this:
-
-```markdown
-# Student Report
-
-Generated on: 20/03/2026
-
-## Summary
-
-Total Students: 3
-
-## Student Details
-
-### Alice Martin
-
-- **Email:** alice.martin@epita.fr
-- **Major:** Computer Science
-- **GPA:** 3.8
-- **ID:** 1
-  ...
+// push to github and share the link ✅
 ```
-
-## Hints
-
-- `__dirname` is a Node.js variable that always points to the folder where your script lives — useful for building reliable file paths
-- `Array.forEach()` lets you loop over each student and append their info to your Markdown string
-- Template literals (backticks) make it easy to embed variables inside strings: `` `Hello ${name}` ``
