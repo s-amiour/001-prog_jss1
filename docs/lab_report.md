@@ -32,4 +32,33 @@
 Nodemon is a development tool that automatically restarts your server when you save a file. It should be installed as a **dev dependency** — meaning it is only needed during development, not in production.
 
 **Your task:** Explain in your own words the difference between a regular dependency and a dev dependency. Why does it matter?
->tbd
+>The difference between a `dependency` and a `devDependency` is that the `devDependency` object consists of dependencies the developer needs to properly conceive the intended goal, whereas the `dependency` object includes critical dependencies needed for the project to function as intended. This distinction matters for the client to avoid installing dependencies that serve no purpose for them.
+
+<br/>
+
+### 1.2 CommonJS vs. ES Modules
+Node.js supports two module systems. You may encounter both in the wild.
+
+|  | CommonJS (old) | ES Modules (new) |
+| --- | --- | --- |
+| Import | `const x = require('x')` | `import x from 'x'` |
+| Export | `module.exports = x` | `export default x` |
+| Enable | Default in Node.js | Add `"type": "module"` in `package.json` |
+
+**Your task:** Which module system is your project using? How do you know?
+>The project uses the ES6 module system. This can be determined by navigating to [package.json::line18](../package.json) and finding the `type` property.
+
+<br/>
+
+### Project File Structure [SCREENSHOT 1]
+Take a screenshot of your project folder open in VS Code (the Explorer panel on the left). Your structure should show at minimum:
+```
+project/
+├── index.js
+├── package.json
+├── package-lock.json
+├── node_modules/
+└── students.json
+```
+
+><p align="center"><img align="center" src="./img/project-bef.png" height="180" alt="Favicon" /></p>
