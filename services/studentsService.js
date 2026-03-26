@@ -1,7 +1,9 @@
 // emulates db connection !!
-// import { students } from "../students.js";
+import { students } from "../students.js";
+// console.log(students.length + 1);
+console.log("date", Date.now());
 
-const students = [];
+// const students = [];
 
 export const findAllUsers = () => {
   if (!students || students.length === 0) {
