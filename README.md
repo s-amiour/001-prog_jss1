@@ -1,5 +1,10 @@
 # Exercise 02 — API with JSON Model
 
+### Lab Report
+<div align="center">
+  [Overview](../README.md)
+</div>
+
 ```
 Semester: S4
 Course: Server Side JavaScript
