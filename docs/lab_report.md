@@ -153,7 +153,7 @@ Take a screenshot showing:
 - The error details (you can click the request to expand it)
 - The Console tab error message if visible
 
-> **[Insert screenshot here]**
+><p align="center"><img align="center" src="./img/scr4-1.png" height="480" alt="scr4-1" /></p>
 
 ---
 
@@ -183,7 +183,7 @@ Take a screenshot showing:
 - The **Response** or **Preview** sub-tab showing the returned data
 - The **Headers** sub-tab showing `Access-Control-Allow-Origin` in the response headers
 
-> **[Insert screenshot here]**
+><p align="center"><img align="center" src="./img/scr5.png" height="480" alt="scr5" /></p>
 
 ## Section 5 — CRUD & HTTP Methods
 
@@ -269,14 +269,14 @@ project/
 ### 📸 Screenshot 6 — Refactored Folder Architecture
 Take a screenshot of your project in VS Code after refactoring. The Explorer panel should show the full folder tree including `routes/`, `controllers/`, and `services/`.
 
-> **[Insert screenshot here]**
+><p align="center"><img align="center" src="./img/scr6.png" height="480" alt="scr6" /></p>
 
 ---
 
 ### 📸 Screenshot 7 — Network Tab: API Still Works After Refactor
 After refactoring, your API should behave exactly as before. Use the Network tab to confirm a GET request to `/students` still returns the correct data.
 This screenshot proves that refactoring did not break anything.
-> **[Insert screenshot here]**
+><p align="center"><img align="center" src="./img/scr7.png" height="480" alt="scr7" /></p>
 
 ## Section 7 — Debugging with the Network Tab
 
@@ -293,9 +293,7 @@ The browser's Network tab is one of the most useful debugging tools available to
 | Request body | Payload tab | For POST/PUT — confirms data was sent correctly |
 
 **Your task:** Describe a bug you encountered during this lab. How did the Network tab (or Postman) help you identify and fix it?
-
-> *Your answer here...*
-> 
+>I encountered a bug where all requests failed. I later found out via Postman (which kept returning {} as response body) that I had to include `async` into every controller and service function because my `studentRepository` functions are asynchronous. 
 
 ---
 
@@ -319,14 +317,14 @@ Before submitting, verify everything below is complete.
 
 ### Report
 
-- [ ]  All reflection questions are answered in your own words
+- [x]  All reflection questions are answered in your own words
 - [x]  Screenshot 1 — Project file structure
 - [x]  Screenshot 2 — Postman: GET request to `/`
 - [x]  Screenshot 3 — Postman: GET `/students` response
-- [ ]  Screenshot 4 — Network tab: CORS error before fix
-- [ ]  Screenshot 5 — Network tab: successful response after fix
-- [ ]  Screenshot 6 — Refactored folder architecture
-- [ ]  Screenshot 7 — Network tab: API works after refactor
+- [x]  Screenshot 4 — Network tab: CORS error before fix
+- [x]  Screenshot 5 — Network tab: successful response after fix
+- [x]  Screenshot 6 — Refactored folder architecture
+- [x]  Screenshot 7 — Network tab: API works after refactor
 
 ---
 
@@ -342,8 +340,8 @@ Before submitting, verify everything below is complete.
 | Body parser configured | x |  |  |
 | All CRUD route signatures present | x |  |  |
 | Code correctly refactored into layers | x |  |  |
-| Reflection answers are thoughtful and in own words |  |  |  |
-| All required screenshots included and readable |  |  |  |
+| Reflection answers are thoughtful and in own words | x |  |  |
+| All required screenshots included and readable | x |  |  |
 | GitHub repository is accessible and up to date | x |  |  |
 
 ---

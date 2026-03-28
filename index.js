@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import logMiddleware from "./middleware/log.js";
-import studentRoutes from "./routes/studentRoutes.js"
+import students from "./routes/students.js"
 
 const app = express()
 const port = 3000
@@ -31,7 +31,7 @@ app.get('/health', (req, res) => {
 })
 
 // Mount the model router at its route, making it base endpoint
-app.use('/api/students', studentRoutes)
+app.use('/api/students', students)
 
 // 404 handler
 app.use((req, res) => {
@@ -56,9 +56,9 @@ app.listen(port, () => {
 	console.log(`\nAPI Endpoints:`)
 	console.log(`  GET    /              - Welcome message (public)`)
 	console.log(`  GET    /health        - Health check (public)`)
-	console.log(`  GET    /students         - Get all students`)
-	console.log(`  GET    /students/:id     - Get by model ID`)
-	console.log(`  POST   /students         - Create new model`)
-	console.log(`  PUT    /students/:id     - Update model`)
-	console.log(`  DELETE /students/:id     - Delete model`)
+	console.log(`  GET    /api/students         - Get all students`)
+	console.log(`  GET    /api/students/:id     - Get by model ID`)
+	console.log(`  POST   /api/students         - Create new model`)
+	console.log(`  PUT    /api/students/:id     - Update model`)
+	console.log(`  DELETE /api/students/:id     - Delete model`)
 })
