@@ -7,9 +7,9 @@ const app = express()
 const port = 3000
 
 // Global middleware
+app.use(cors())
 app.use(express.json())  // Translates response via JSON
 app.use(logMiddleware)
-app.use(cors())
 
 // home route
 app.get("/", (req, res) => {
