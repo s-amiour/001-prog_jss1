@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 		message: "Welcome to the API",
 		version: "1.0.0",
 		endpoints: {
-			students: "/students"
+			students: "/api/students"
 		}
 	})
 })
@@ -31,7 +31,7 @@ app.get('/health', (req, res) => {
 })
 
 // Mount the model router at its route, making it base endpoint
-app.use('/students', studentRoutes)
+app.use('/api/students', studentRoutes)
 
 // 404 handler
 app.use((req, res) => {
