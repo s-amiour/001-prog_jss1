@@ -1,12 +1,17 @@
 # Exercise 02 — API with JSON Model
 
+<div align="center">
+  
+  [Lab Report](./docs/lab_report.md)
+</div>
+
 ```
 Semester: S4
 Course: Server Side JavaScript
 Course Code: PROG_JSS1
 ```
 
-## Exercise Branches for Assignment
+## Exercise Branches
 ```
 Exercise 01: exercise-001
 Exercise 02: exercise-002

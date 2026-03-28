@@ -9,7 +9,6 @@ const filePath = join(__dirname, '../students.json');
 // --- HELPER FUNCTIONS ---
 export async function loadData() {
   const data = await readFile(filePath, 'utf-8');
-  console.log(filePath)
   return JSON.parse(data);
 }
 

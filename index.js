@@ -7,11 +7,11 @@ const app = express()
 const port = 3000
 
 // Global middleware
+app.use(cors())
 app.use(express.json())  // Translates response via JSON
 app.use(logMiddleware)
-app.use(cors())
 
-// home route
+// Home route
 app.get("/", (req, res) => {
 	res.json({
 		message: "Welcome to the API",
@@ -27,7 +27,6 @@ app.get('/health', (req, res) => {
 	res.json({ 
 		status: 'OK',
 		timestamp: new Date().toISOString(),
-		// environment: config.nodeEnv
 	})
 })
 
@@ -42,7 +41,7 @@ app.use((req, res) => {
 	})
 })
 
-// Error handler
+// Global error handler
 app.use((err, req, res, next) => {
 	console.error('Error:', err)
 	res.status(err.status || 500).json({
