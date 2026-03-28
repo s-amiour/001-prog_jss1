@@ -141,7 +141,7 @@ Make a GET request to `/students` in Postman. Take a screenshot showing:
 This is a **browser restriction** — it does not affect Postman or server-to-server communication.
 
 **Your task:** Before enabling CORS, open your `index.html` frontend in the browser and observe the error in the console. What does the error say?
-> *Your answer here...*
+>`Access to fetch at 'http://localhost:3000/students' from origin 'http://127.0.0.1:5500' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource`.
 
 ---
 
