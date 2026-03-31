@@ -1,9 +1,6 @@
-# Exercise 02 — API with JSON Model
+# Student CRUD Application
 
-<div align="center">
-  
-  [Lab Report](./docs/lab_report.md)
-</div>
+This repository serves as project work for the PROG_JSS1 course. This Express application is a CRUD API utilizing MongoDB as a DBMS.
 
 ```txt
 Semester: S4
@@ -14,14 +11,16 @@ Course Code: PROG_JSS1
 ## Exercise Branches
 
 ```txt
-Exercise 01: exercise-001
-Exercise 02: exercise-002
+Phase 01: feat/01/json-read
+Phase 02: feat/02/student-json-crud
+Final Phase: feat/04/mvc-full-mongodb
 ```
 
 ## Goal
 
-Construct an API (almost MVC but with .json as model) that the FONT/ client can fetch and display. CRUD operations must also be present.
+Construct an API (almost MVC but with .json as model) that the client can fetch and display. CRUD operations must also be present.
 
+## Professor's Instructions
 
 ```txt
 // NODEMON ✅
