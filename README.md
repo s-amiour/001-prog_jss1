@@ -10,6 +10,8 @@ Course Code: PROG_JSS1
 
 ## Exercise Branches
 
+For grading purposes, the professor can analyze progress stages by accessing the following branches:
+
 ```txt
 Phase 01: feat/01/json-read
 Phase 02: feat/02/student-json-crud
