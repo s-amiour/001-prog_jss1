@@ -5,14 +5,15 @@
   [Lab Report](./docs/lab_report.md)
 </div>
 
-```
+```txt
 Semester: S4
 Course: Server Side JavaScript
 Course Code: PROG_JSS1
 ```
 
 ## Exercise Branches
-```
+
+```txt
 Exercise 01: exercise-001
 Exercise 02: exercise-002
 ```
@@ -22,7 +23,7 @@ Exercise 02: exercise-002
 Construct an API (almost MVC but with .json as model) that the FONT/ client can fetch and display. CRUD operations must also be present.
 
 
-```
+```txt
 // NODEMON ✅
 
 // send data to the exposed endpoints ✅

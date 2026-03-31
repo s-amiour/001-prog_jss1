@@ -1,13 +1,13 @@
 import express from "express"
 import cors from "cors"
 import logMiddleware from "./middleware/log.js";
-import students from "./routes/students.js"
+import students from "./routes/studentsRoutes.js"
 
 const app = express()
 const port = 3000
 
 // Global middleware
-app.use(cors())
+app.use(cors())  // Allows other sites/servers to access this server's resources
 app.use(express.json())  // Translates response via JSON
 app.use(logMiddleware)
 
@@ -53,9 +53,10 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
 	console.log(`✅ Server running on http://localhost:${port}`)
 	console.log(`📊 Environment: Development (NOT PRODUCTION)`)
+	console.log(`==========================================================`)
 	console.log(`\nAPI Endpoints:`)
-	console.log(`  GET    /              - Welcome message (public)`)
-	console.log(`  GET    /health        - Health check (public)`)
+	console.log(`  GET    /                     - Welcome message (public)`)
+	console.log(`  GET    /health               - Health check (public)`)
 	console.log(`  GET    /api/students         - Get all students`)
 	console.log(`  GET    /api/students/:id     - Get by model ID`)
 	console.log(`  POST   /api/students         - Create new model`)

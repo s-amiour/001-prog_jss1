@@ -1,4 +1,4 @@
-import { loadData, saveData } from "../repositories/studentRepository.js"
+import { loadData, saveData } from "../repositories/studentsRepository.js"
 
 // Get all students
 export async function getAllStudents(){
