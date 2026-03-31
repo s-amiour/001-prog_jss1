@@ -20,7 +20,7 @@ Final Phase: feat/04/mvc-full-mongodb
 
 ## Goal
 
-Construct an API (almost MVC but with .json as model) that the client can fetch and display. CRUD operations must also be present.
+Construct an API that the client can fetch and display. CRUD operations must also be present.
 
 ### Project Structure
 
