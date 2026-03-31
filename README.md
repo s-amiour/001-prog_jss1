@@ -20,6 +20,31 @@ Final Phase: feat/04/mvc-full-mongodb
 
 Construct an API (almost MVC but with .json as model) that the client can fetch and display. CRUD operations must also be present.
 
+### Project Structure
+
+```txt
+├── backend/
+│   ├── config/             # Database connection settings
+│   ├── controllers/        # Request handling and response logic
+│   │   └── studentsController.js
+│   ├── middleware/         # Functions like CORS or Authentication
+│   ├── repositories/       # Data Access Layer (SQL queries go here)
+│   │   └── studentsRepository.js
+│   ├── routes/             # API endpoint definitions
+│   │   └── studentsRoutes.js
+│   ├── services/           # Business logic and data processing
+│   │   └── studentsService.js
+│   ├── index.js            # Main entry point for the server
+│   └── students.json       # Mock data file
+├── frontend/
+│   ├── favicon.svg         # Browser icon
+│   ├── index.html          # Main HTML structure
+│   ├── script.js           # Frontend logic and Fetch API calls
+│   └── style.css           # UI styling
+└── README.md
+```
+
+
 ## Professor's Instructions
 
 ```txt
