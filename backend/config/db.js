@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import "dotenv/config";
 
 // extract mongodb atlas cluster connection string
 const MONGO_URI = process.env.MONGO_URI;
