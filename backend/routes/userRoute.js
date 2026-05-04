@@ -2,8 +2,6 @@ import express from "express";
 import multerConfig from "../middleware/multer-config.js";
 
 import { validateStudent } from "../middleware/validateStudent.js";
-import { validateCourse } from "../middleware/validateCourse.js";
-import { validateRoom } from "../middleware/validateRoom.js";
 import { loginHandler, registerHandler } from "../controllers/userController.js";
 
 const userRouter = express.Router();
@@ -17,8 +15,6 @@ userRouter.post(
     });
   },
   validateStudent,
-  validateRoom,
-  validateCourse,
   registerHandler
 );
 userRouter.post("/login", loginHandler);

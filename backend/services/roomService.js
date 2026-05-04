@@ -7,6 +7,6 @@ export const findRoomById = (id) => Room.findById(id);
 export const createRoomService = (data) => Room.create(data);
 
 export const updateRoomService = (id, data) =>
-    Student.findByIdAndUpdate(id, data, { new: true });
+    Room.findByIdAndUpdate(id, data, { new: true });
 
-export const deleteRoomService = (id) => Student.findByIdAndDelete(id);
+export const deleteRoomService = (id) => Room.findByIdAndDelete(id);

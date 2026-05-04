@@ -10,4 +10,5 @@ const studentSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-export default mongoose.model("Student", studentSchema);
+const Student = mongoose.model("Student", studentSchema); 
+export default Student;

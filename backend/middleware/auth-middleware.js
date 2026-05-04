@@ -11,10 +11,10 @@ const authN = (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = decoded; // { userId, email } now available in route handlers
+        req.user = decoded;
         next();
     } catch {
-        res.status(401).json({ message: "Invalid or expired token" });
+        res.status(401).json({ message: "Invalid / expired token" });
     }
 };
 

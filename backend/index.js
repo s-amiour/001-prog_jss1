@@ -7,6 +7,7 @@ import logMiddleware from "./middleware/log-middleware.js";
 import studentRouter from "./routes/studentRoute.js"
 import courseRouter from "./routes/courseRoute.js"
 import roomRouter from "./routes/roomRoute.js"
+import userRouter from "./routes/userRoute.js";
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -18,6 +19,7 @@ await connectToMongoDB();
 app.use(cors())  // allow other sites/servers to access this server's resources
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())  // translate response via JSON
+app.use(express.static("public"));
 app.use(logMiddleware)
 
 // read root
@@ -28,7 +30,8 @@ app.get("/", (req, res) => {
 		endpoints: {
 			students: "/api/students",
 			courses: "/api/courses",
-			rooms: "/api/rooms"
+			rooms: "/api/rooms",
+			users: "/api/users",
 		}
 	})
 })
@@ -45,6 +48,7 @@ app.get('/health', (req, res) => {
 app.use('/api/students', studentRouter)
 app.use('/api/courses', courseRouter)
 app.use('/api/rooms', roomRouter)
+app.use('/api/users', userRouter)
 
 // 404 handler
 app.use((req, res) => {
