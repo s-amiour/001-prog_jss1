@@ -7,7 +7,7 @@ export const register = async (name, email, password, major, gpa, imageUrl) => {
 
     if (existingUser) throw new Error("Email already in use");
 
-    SALT_ROUNDS = 10
+    const SALT_ROUNDS = 10
 
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
 
