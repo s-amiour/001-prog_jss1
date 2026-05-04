@@ -4,7 +4,7 @@ import {
     createStudentService,
     updateStudentService,
     deleteStudentService,
-} from "../services/studentsService.js";
+} from "../services/studentService.js";
 
 const toStudentDTO = (student) => ({
     id: student._id,
@@ -20,7 +20,7 @@ export const getAllStudents = async (req, res) => {
     }
 };
 
-export const findStudentById = async (req, res) => {
+export const getStudentById = async (req, res) => {
     try {
         const student = await findStudentById(req.params.id);
         if (!student) return res.status(404).json({ message: "Student not found" });
@@ -32,7 +32,7 @@ export const findStudentById = async (req, res) => {
 
 export const createStudent = async (req, res) => {
     try {
-        const newStudent = await createStudent(req.body);
+        const newStudent = await createStudentService(req.body);
         res.status(201).json(toStudentDTO(newStudent));
     } catch (err) {
         res.status(400).json({ message: err.message });
@@ -41,7 +41,7 @@ export const createStudent = async (req, res) => {
 
 export const updateStudent = async (req, res) => {
     try {
-        const updated = await updateStudent(req.params.id, req.body);
+        const updated = await updateStudentService(req.params.id, req.body);
         if (!updated) return res.status(404).json({ message: "Student not found" });
         res.status(200).json(toStudentDTO(updated));
     } catch {
@@ -51,7 +51,7 @@ export const updateStudent = async (req, res) => {
 
 export const deleteStudent = async (req, res) => {
     try {
-        const deleted = await deleteStudent(req.params.id);
+        const deleted = await deleteStudentService(req.params.id);
         if (!deleted) return res.status(404).json({ message: "Student not found" });
         res.status(200).json({ message: "Student deleted" });
     } catch {

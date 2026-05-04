@@ -4,7 +4,7 @@ import {
     createCourseService,
     updateCourseService,
     deleteCourseService,
-} from "../services/coursesService.js";
+} from "../services/courseService.js";
 
 const toCourseDTO = (course) => ({
     id: course._id,
@@ -36,7 +36,7 @@ export const getCourseById = async (req, res) => {
 export const createCourse = async (req, res) => {
     try {
         const { title, description, credits, instructor } = req.body;
-        const course = await createCourse({ title, description, credits, instructor });
+        const course = await createCourseService({ title, description, credits, instructor });
         res.status(201).json(toCourseDTO(course));
     } catch (err) {
         res.status(400).json({ message: err.message });
@@ -45,7 +45,7 @@ export const createCourse = async (req, res) => {
 
 export const updateCourse = async (req, res) => {
     try {
-        const updated = await updateCourse(req.params.id, req.body);
+        const updated = await updateCourseService(req.params.id, req.body);
         if (!updated) return res.status(404).json({ message: "Course not found" });
         res.status(200).json(toCourseDTO(updated));
     } catch {
@@ -55,7 +55,7 @@ export const updateCourse = async (req, res) => {
 
 export const deleteCourse = async (req, res) => {
     try {
-        const deleted = await deleteCourse(req.params.id);
+        const deleted = await deleteCourseService(req.params.id);
         if (!deleted) return res.status(404).json({ message: "Course not found" });
         res.status(200).json({ message: "Course deleted" });
     } catch {
