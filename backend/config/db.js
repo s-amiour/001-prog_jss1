@@ -5,7 +5,7 @@ import "dotenv/config";
 const MONGO_URI = process.env.MONGO_URI;
 
 // initiate connection to mongoDB atlas cluster connection string
-const connectToMongoDB = async () => {
+export const connectToMongoDB = async () => {
     try {
         await mongoose.connect(MONGO_URI)
         console.log("Connected to MongoDB")
@@ -14,5 +14,3 @@ const connectToMongoDB = async () => {
         process.exit(1)  // terminate process synchronously
     }
 };
-
-export default connectToMongoDB
